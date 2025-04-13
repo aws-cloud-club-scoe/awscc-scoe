@@ -1,20 +1,32 @@
-// Firebase Initialization
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+// Import the required Firebase modules
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
+// Firebase configuration object
 const firebaseConfig = {
-  apiKey: "Your-API-Key",
-  authDomain: "Your-Auth-Domain",
-  projectId: "Your-Project-Id",
-  storageBucket: "Your-Storage-Bucket",
-  messagingSenderId: "Your-Sender-Id",
-  appId: "Your-App-Id",
-  measurementId: "Your-Measurement-Id"
+  apiKey: "AIzaSyBG1E5d6CTmwlGxiPc3YVBCUF-_uIrq8vs",
+  authDomain: "aws-scoe.firebaseapp.com",
+  projectId: "aws-scoe",
+  storageBucket: "aws-scoe.appspot.com",
+  messagingSenderId: "672219389679",
+  appId: "1:672219389679:web:42fd3fb758668635b3c51a",
+  measurementId: "G-RQPPJH6JCC",
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
-export const db = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Analytics
+const analytics = getAnalytics(app);
+
+// Initialize Firebase Authentication
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+// Initialize Firestore Database
+const db = getFirestore(app);
+
+// Export Firebase modules for use across the project
+export { app, analytics, auth, provider, db };
