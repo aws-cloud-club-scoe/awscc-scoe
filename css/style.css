@@ -1,0 +1,146 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation Bar Styling */
+  nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-left .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .club-name {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Desktop Menu */
+  .nav-right .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-right .menu li {
+    margin-left: 15px;
+  }
+  
+  .nav-right .menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* The menu button (hamburger) – visible on mobile */
+  .menu-btn {
+    display: none;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Menu for smaller screens */
+  @media (max-width: 768px) {
+    .nav-right .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 150px;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+  
+  /* Slider Section Styles */
+  .slider-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .slider-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Club Information Paragraph */
+  .club-info {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  
+  /* Form Container (Login/Signup) */
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label,
+  .form-container input {
+    margin: 5px 0;
+  }
+  
+  .form-container input {
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .form-container button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Main Content Styling */
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
